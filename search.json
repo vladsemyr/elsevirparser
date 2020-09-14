@@ -1,0 +1,17 @@
+{
+    "default": {
+        "begin_year": 2000,
+        "end_year": 2020,
+        "output_filename": "out.csv"
+    },
+    "titles": {
+        "DSP": {
+            "similar": ["digital signal processor"],
+            "output_filename": "DSP.csv"
+        },
+        "FFT": {
+            "similar": ["fast fourier transformation"],
+            "output_filename": "FFT.csv"
+        }
+    }
+}

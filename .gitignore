@@ -2,3 +2,5 @@ data
 logs
 dump.json
 config.json
+*.csv
+.vscode

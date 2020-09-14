@@ -6,12 +6,10 @@
     },
     "titles": {
         "DSP": {
-            "similar": ["digital signal processor"],
-            "output_filename": "DSP.csv"
+            "similar": ["digital signal processor"]
         },
         "FFT": {
-            "similar": ["fast fourier transformation"],
-            "output_filename": "FFT.csv"
+            "similar": ["fast fourier transformation"]
         }
     }
 }

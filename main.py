@@ -17,20 +17,6 @@ con_file.close()
 client = ElsClient(config['apikey'])
 client.inst_token = config['insttoken']
 
-class Searcher(Thread):
-    def __init__(self, search_string, filename, title, year):
-        self._search_string = search_string
-        self._filename = filename
-        self._title = title
-        self._year = year
-    
-    def run(self):
-        doc_srch = ElsSearch(self._search_string,'sciencedirect')
-        doc_srch.execute(client, get_all = False)
-        
-        with open(self._filename, "a") as f:
-            f.write(f"{self._title};{self._year};{doc_srch.tot_num_res}\n")
-        pass
 
 class Article:
     _begin_year = 2000
@@ -65,9 +51,11 @@ class Article:
         for year in range(self._begin_year, self._end_year + 1):
             search_string_year = f" AND PUBYEAR = {year}"
             
-            s = Searcher(search_string_without_year + search_string_year, self._filename, self._title, year)
-            s.run()
-
+            doc_srch = ElsSearch(search_string_without_year + search_string_year,'sciencedirect')
+            doc_srch.execute(client, get_all = False)
+            
+            with open(self._filename, "a") as f:
+                f.write(f"{self._title};{year};{doc_srch.tot_num_res}\n")
     
     def clean_file(self):
         with open(self._filename, "w") as _:

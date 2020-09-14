@@ -44,6 +44,10 @@ class Article:
         
         if "similar" in d:
             self._similar = d["similar"]
+        
+        self._new_title = self._title
+        if "title" in d:
+            self._new_title = d["title"]
     
     def search(self):
         search_string_without_year = f"({self._title})" + "".join(list(f" OR ({x})" for x in self._similar))
@@ -55,7 +59,7 @@ class Article:
             doc_srch.execute(client, get_all = False)
             
             with open(self._filename, "a") as f:
-                f.write(f"{self._title};{year};{doc_srch.tot_num_res}\n")
+                f.write(f"{self._new_title};{year};{doc_srch.tot_num_res}\n")
     
     def clean_file(self):
         with open(self._filename, "w") as _:

@@ -6,7 +6,8 @@
     },
     "titles": {
         "DSP": {
-            "similar": ["digital signal processor"]
+            "similar": ["digital signal processor"],
+            "title": "Сигнальный процессор"
         },
         "FFT": {
             "similar": ["fast fourier transformation"]
@@ -22,16 +23,18 @@
         "DFT": {
             "similar": ["discrete Fourier transformation"]
         },
-        "Good–Thomas algorithm": {},
-        "Cooley–Tukey FFT": {
-            "similar": ["Cooley–Tukey algorithm"]
-        },
-        "Rader's FFT algorithm": {
-            "similar": ["Rader's algorithm"]
-        },
         "Residue number system": {},
         "Modular arithmetic": {},
         "Chinese remainder theorem": {},
-        "PLD": {}
+        "PLD": {},
+        "Good–Thomas algorithm": {
+            "similar": ["Good Thomas algorithm", "Good Thomas FFT"]
+        },
+        "Cooley Tukey FFT": {
+            "similar": ["Cooley Tukey algorithm"]
+        },
+        "Rader's FFT algorithm": {
+            "similar": ["Rader's algorithm", "Raders algorithm", "Raders FFT"]
+        }
     }
 }

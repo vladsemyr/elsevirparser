@@ -1,6 +1,6 @@
 {
     "default": {
-        "begin_year": 2000,
+        "begin_year": 1990,
         "end_year": 2020,
         "output_filename": "out.csv"
     },
@@ -10,6 +10,28 @@
         },
         "FFT": {
             "similar": ["fast fourier transformation"]
-        }
+        },
+        "High-performance computing systems": {},
+        "Digital signal processing": {},
+        "Digital filtering": {},
+        "FIR filter": {},
+        "IIR filter": {},
+        "non-recursive filtering": {},
+        "recursive filtering": {},
+        "Spectral analysis": {},
+        "DFT": {
+            "similar": ["discrete Fourier transformation"]
+        },
+        "Good–Thomas algorithm": {},
+        "Cooley–Tukey FFT": {
+            "similar": ["Cooley–Tukey algorithm"]
+        },
+        "Rader's FFT algorithm": {
+            "similar": ["Rader's algorithm"]
+        },
+        "Residue number system": {},
+        "Modular arithmetic": {},
+        "Chinese remainder theorem": {},
+        "PLD": {}
     }
 }

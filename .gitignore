@@ -5,3 +5,4 @@ config.json
 *.csv
 .vscode
 images
+!result.csv

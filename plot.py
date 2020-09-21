@@ -1,10 +1,11 @@
 import matplotlib.pyplot as plt
 import sys
+import io
 
 
 input_filename = sys.argv[1]
 
-with open(input_filename, "r") as f:
+with io.open(input_filename, mode="r", encoding="utf-8") as f:
     plots_data = {}
     lines = f.readlines()
     lines = map(lambda x: x.split(";"), lines)
